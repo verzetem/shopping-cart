@@ -68,7 +68,7 @@ class App extends Component {
 
   render() {
     const gTotal = this.state.cartItemsList.reduce((total, cartItem) => {
-      return total + Number(cartItem.product.priceInCents)
+      return total + Number(cartItem.product.priceInCents * cartItem.quantity)
     }, 0)
     return (
       <div className="App">
