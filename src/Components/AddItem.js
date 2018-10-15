@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AddItem = ({ productsList, addToProdList, inputListen }) => {
+const AddItem = ({ productsList, addToProdList, inputListen, addToCart }) => {
 
 	
 	// const optionChange = (e) => {		
@@ -30,7 +30,7 @@ const AddItem = ({ productsList, addToProdList, inputListen }) => {
 		    </select>
 		    <h5 className="white">Price per selected item: </h5>
 		  </div>
-		    <button className="btn btn-warning"> Submit </button>
+		    <button onClick={addToCart} className="btn btn-warning"> Submit </button>
 	  </form>
   </div>
 
