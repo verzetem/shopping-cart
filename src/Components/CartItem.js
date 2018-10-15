@@ -8,7 +8,7 @@ const CartItem = ({ cartItemsList, productsList }) => {
 				<div className="collection-item">
 				  <div className="row">
 				    <div className="col-md-8">{cartItem.product.name}</div>
-				    <div className="col-md-2">${cartItem.product.priceInCents/100 * cartItem.quantity}</div>
+				    <div className="col-md-2">${(cartItem.product.priceInCents/100) * cartItem.quantity}</div>
 				    <div className="col-md-2">{cartItem.quantity}</div>
 				  </div>
 				</div>
@@ -16,9 +16,4 @@ const CartItem = ({ cartItemsList, productsList }) => {
 	  );
 	})
 }
-	
-	
-  
-
-
 export default CartItem;

@@ -2,12 +2,7 @@ import React from 'react';
 
 const AddItem = ({ productsList, addToProdList, inputListen, addToCart }) => {
 
-const selected = (e) => {
-	console.log(e.target.attributes.price.value)
-}
-
 	return (
-
 		<div className="container">
 	  <form>
     	<div className="form-group">
@@ -20,13 +15,11 @@ const selected = (e) => {
 						<option id="options" key={product.id} pid={product.id} price={product.priceInCents}>{product.name}</option>
 		      )}
 		    </select>
-		    <h5 className="white">Price per selected item: {selected}</h5>
+		    <h5 className="white">Price per selected item: </h5>
 		  </div>
 		    <button onClick={addToCart} className="btn btn-warning"> Submit </button>
 	  </form>
   </div>
-
   )
 }
-
 export default AddItem;
