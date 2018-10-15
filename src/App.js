@@ -30,29 +30,28 @@ class App extends Component {
         id: "",
         name: "",
         priceInCents: 0,
-        quantity: 0,
-      }
+      },
+      quantity: 0,
    }
 
   addToCart = (e) => {
     e.preventDefault()
     let cartList = this.state.cartItemsList
-    let newItem = { product: { id: this.state.newProd.id, name: this.state.newProd.name, priceInCents: this.state.newProd.priceInCents}, quantity: this.state.newProd.quantity}
+    let newItem = { product: { id: this.state.newProd.id, name: this.state.newProd.name, priceInCents: this.state.newProd.priceInCents}, quantity: this.state.quantity}
     this.setState({ cartItemsList: cartList.concat(newItem) })
-
-    console.log("app.js addToCart", this.state.newProd)
+    // console.log("app.js addToCart", this.state.newProd)
   }
 
   inputListen = (e) => {
     e.preventDefault()
-    this.setState({newProd: {quantity: e.target.value}})
-    console.log(this.state.newProd.quantity)
+    this.setState({quantity: e.target.value})
+    // console.log(this.state.quantity)
   }
 
   optionChange = (e) => {
     this.setState({newProd: {name: (e.target.value)} })
     // console.log("newItem: name=", this.state.newItem.name)
-    console.log(this.state.newProd)
+    // console.log(this.state.newProd)
   }
   
   addToProdList = (e) => {
@@ -66,8 +65,6 @@ class App extends Component {
           this.setState({ newProd: { id: prodID, name: prodName, priceInCents: prodPrice } })
        }
       }
-    
-
   }
 
 

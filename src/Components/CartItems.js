@@ -3,6 +3,14 @@ import CartItem from './CartItem'
 
 const CartItems = ({ cartItemsList, productsList }) => {
 
+const grandTotal = () => {
+    for (let i = 0; i < cartItemsList.length; i++) {
+    	let total = 0
+    	total = cartItemsList[i].product.priceInCents/100
+    	return total
+    }
+  }
+
   return (
     <div className="container">
 	    <h1 className="white">Cart Items</h1>
@@ -16,7 +24,7 @@ const CartItems = ({ cartItemsList, productsList }) => {
 	      </div>
 	      <CartItem cartItemsList={cartItemsList} productsList={productsList} />
 	    </div>
-	    <h5 className="white right">Grand Total: </h5>
+	    <h5 className="white right">Grand Total: ${grandTotal()}</h5>
 	  </div>
   );
 }
