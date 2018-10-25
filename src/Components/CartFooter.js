@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 
 const CartFooter = ({ copyright, year }) => {
 	
@@ -12,4 +12,4 @@ const CartFooter = ({ copyright, year }) => {
 }
 
 
-export default CartFooter;
+export default CartFooter

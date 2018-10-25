@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 
 const CartHeader = () => {
 
@@ -14,4 +14,4 @@ const CartHeader = () => {
 
     
 
-export default CartHeader;
+export default CartHeader

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react"
 
 const AddItem = ({ productsList, addToProdList, inputListen, addToCart }) => {
 
@@ -21,4 +21,4 @@ const AddItem = ({ productsList, addToProdList, inputListen, addToCart }) => {
   </div>
   )
 }
-export default AddItem;
+export default AddItem
