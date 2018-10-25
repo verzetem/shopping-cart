@@ -17,6 +17,6 @@ const CartItems = ({ cartItemsList, productsList }) => {
 	      <CartItem cartItemsList={cartItemsList} productsList={productsList} />
 	    </div>
 	  </div>
-  );
+  )
 }
 export default CartItems
